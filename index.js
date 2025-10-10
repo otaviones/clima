@@ -28,7 +28,7 @@ app.get('/clima', async (req, res) => {
 
         const response = await axios.get('http://api.weatherapi.com/v1/current.json', { //O sgundo parametro é um objeto com os shortcuts da URL
             params: {
-                key: '1e9e4da99e41469c90e10557250910',
+                key: process.env.WEATHER_API_KEY,
                 q: cidade,
                 aqi: 'yes',
                 lang: 'pt'
