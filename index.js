@@ -22,6 +22,7 @@ app.get('/', (req, res) => {
 
 //Clima por região
 app.get('/clima', async (req, res) => {
+    console.log('Verificando a chave no servidor:', process.env.WEATHER_API_KEY);
     try {
         //Pegando a cidade que veio do FRONT URL
         const cidade = req.query.cidade;
